@@ -4,6 +4,8 @@ import desafio_por_idade
 import desafio_logon
 
 
+restaurantes = []
+
 
 def exibir_nome_do_programa():
     print("hello world")
@@ -45,7 +47,12 @@ def escolher_opcao():
         opcao_invalida()
 
 def cadastrar_novo_restaurante():
-    print('Cadastrando novo restaurante')
+    os.system('clear')
+    print('Cadastrar novo restaurante')
+    nome = input('Digite o nome do restaurante: ')
+    endereco = input('Digite o endereço do restaurante: ')
+    restaurantes.append({'nome': nome, 'endereco': endereco})
+    print(f'Restaurante cadastrado com sucesso {restaurantes}')
 
 
 def main():
