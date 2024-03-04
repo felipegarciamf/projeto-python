@@ -1,6 +1,7 @@
 import os
 import desafio_par_impar
 import desafio_por_idade
+import desafio_logon
 
 
 
@@ -42,6 +43,7 @@ def main():
     escolher_opcao()
     desafio_par_impar.exibirNumero()
     desafio_por_idade.validarIdade()
+    desafio_logon.logarUsuario()
 
 
 
