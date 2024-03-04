@@ -23,26 +23,30 @@ def opcaoInvalida():
     os.system('clear')
 
 def escolher_opcao():
-    opcao_escolhida = input('Digite a opção desejada: ')
-    opcao_escolhida = int(opcao_escolhida)
-    print(opcao_escolhida == 1)
-    print (type(opcao_escolhida))
-    print(type(1))
-    print(f'Você escolheu a opção {opcao_escolhida}')
+    try:
+        opcao_escolhida = input('Digite a opção desejada: ')
+        opcao_escolhida = int(opcao_escolhida)
+        print(opcao_escolhida == 1)
+        print (type(opcao_escolhida))
+        print(type(1))
+        print(f'Você escolheu a opção {opcao_escolhida}')
 
-    if opcao_escolhida == 1:
-        print('Cadastrar Restaurante')
-    elif opcao_escolhida == 2:
-        print('Listar Restaurantes')
-    elif opcao_escolhida == 3:
-        print('Ativar Restaurantes')
-    elif opcao_escolhida == 4:
-        finalizarApp()
-    else:
+        if opcao_escolhida == 1:
+            print('Cadastrar Restaurante')
+        elif opcao_escolhida == 2:
+            print('Listar Restaurantes')
+        elif opcao_escolhida == 3:
+            print('Ativar Restaurantes')
+        elif opcao_escolhida == 4:
+            finalizarApp()
+        else:
+            opcaoInvalida()
+    except:
         opcaoInvalida()
 
 
 def main():
+    os.system('clear')
     exibir_nome_do_programa()
     exibir_opcoes()
     escolher_opcao()
