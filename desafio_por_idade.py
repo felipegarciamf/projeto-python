@@ -1,4 +1,4 @@
-def validarIdade():
+def validar_idade():
     try:
         idade = input("Digite a sua idade: ")
         idade = int(idade)

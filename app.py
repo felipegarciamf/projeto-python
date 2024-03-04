@@ -14,11 +14,11 @@ def exibir_opcoes():
     print("2. Listar Restaurantes")
     print("3. Ativar Restaurantes")
 
-def finalizarApp():
+def finalizar_app():
     print('Finalizando aplicação')
     os.system('clear')
 
-def opcaoInvalida():
+def opcao_invalida():
     print('Opção inválida')
     os.system('clear')
 
@@ -38,11 +38,14 @@ def escolher_opcao():
         elif opcao_escolhida == 3:
             print('Ativar Restaurantes')
         elif opcao_escolhida == 4:
-            finalizarApp()
+            finalizar_app()
         else:
-            opcaoInvalida()
+            opcao_invalida()
     except:
-        opcaoInvalida()
+        opcao_invalida()
+
+def cadastrar_novo_restaurante():
+    print('Cadastrando novo restaurante')
 
 
 def main():
@@ -50,9 +53,9 @@ def main():
     exibir_nome_do_programa()
     exibir_opcoes()
     escolher_opcao()
-    desafio_par_impar.exibirNumero()
-    desafio_por_idade.validarIdade()
-    desafio_logon.logarUsuario()
+    desafio_par_impar.exibir_numero()
+    desafio_por_idade.validar_idade()
+    desafio_logon.logar_usuario()
 
 
 
