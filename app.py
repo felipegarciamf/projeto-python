@@ -18,6 +18,9 @@ def finalizarApp():
     print('Finalizando aplicação')
     os.system('clear')
 
+def opcaoInvalida():
+    print('Opção inválida')
+    os.system('clear')
 
 def escolher_opcao():
     opcao_escolhida = input('Digite a opção desejada: ')
@@ -33,8 +36,10 @@ def escolher_opcao():
         print('Listar Restaurantes')
     elif opcao_escolhida == 3:
         print('Ativar Restaurantes')
-    else :
+    elif opcao_escolhida == 4:
         finalizarApp()
+    else:
+        opcaoInvalida()
 
 
 def main():
