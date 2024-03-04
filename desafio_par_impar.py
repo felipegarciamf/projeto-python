@@ -1,4 +1,4 @@
-def exibirNumero(): 
+def exibir_numero(): 
     try:
         numero = input("Coloque um número para definir se é para ou impar: ")
         numero = int(numero)
