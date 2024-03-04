@@ -1,4 +1,6 @@
 import os
+import desafio_par_impar
+import desafio_por_idade
 
 
 
@@ -38,6 +40,11 @@ def main():
     exibir_nome_do_programa()
     exibir_opcoes()
     escolher_opcao()
+    desafio_par_impar.exibirNumero()
+    desafio_por_idade.validarIdade()
+
+
+
 
 if __name__ == "__main__":
    main()
