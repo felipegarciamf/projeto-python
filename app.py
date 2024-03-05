@@ -7,6 +7,10 @@ import desafio_logon
 restaurantes = ['pizza', 'lasanha', 'macarrão', 'sushi', 'hamburguer', 'churrasco', 'feijoada', 'strogonoff', 'peixe', 'frango']
 
 
+def voltar_ao_menu_principal():
+    input('Pressione uma tecla para voltar ao menu ')
+    main()
+
 def exibir_nome_do_programa():
     print("hello world")
 
@@ -23,6 +27,7 @@ def finalizar_app():
 def opcao_invalida():
     print('Opção inválida')
     os.system('clear')
+    voltar_ao_menu_principal()
 
 def escolher_opcao():
     try:
@@ -46,26 +51,30 @@ def escolher_opcao():
             finalizar_app()
         else:
             opcao_invalida()
+            voltar_ao_menu_principal()
     except:
         opcao_invalida()
+        voltar_ao_menu_principal()
+
+def exibir_subtitulo(texto):
+    os.system('clear')
+    print(texto)
+
 
 def cadastrar_novo_restaurante():
-    os.system('clear')
-    print('Cadastrar novo restaurante')
+    exibir_subtitulo('Cadastrar Restaurante')
     nome = input('Digite o nome do restaurante: ')
     restaurantes.append(nome)
     print(f'Restaurante cadastrado com sucesso {restaurantes}')
-    input('Pressione enter para continuar')
-    main()
+    voltar_ao_menu_principal()
+    
 
 def listar_restaurantes():
     os.system('clear')
     print('Listar restaurantes')
     for restaurante in restaurantes:
         print(f'Nome: {restaurante}')
-
-    input('Pressione enter para continuar')
-    main()
+    voltar_ao_menu_principal()
 
 
 def main():
