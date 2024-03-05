@@ -4,7 +4,7 @@ import desafio_por_idade
 import desafio_logon
 
 
-restaurantes = ['pizza', 'lasanha', 'macarrão', 'sushi', 'hamburguer', 'churrasco', 'feijoada', 'strogonoff', 'peixe', 'frango']
+restaurantes = [{'nome' : 'restaurante1', 'ativo': True}, {'nome' : 'restaurante2', 'ativo': False}]
 
 
 def voltar_ao_menu_principal():
@@ -73,7 +73,9 @@ def listar_restaurantes():
     os.system('clear')
     print('Listar restaurantes')
     for restaurante in restaurantes:
-        print(f'Nome: {restaurante}')
+        nome_restaurante = restaurante['nome']
+        ativo = restaurante['ativo']
+        print(f'Nome do restaurante: {nome_restaurante} - Ativo: {ativo}')
     voltar_ao_menu_principal()
 
 
