@@ -38,6 +38,7 @@ def escolher_opcao():
             cadastrar_novo_restaurante()
         elif opcao_escolhida == 2:
             print('Listar Restaurantes')
+            listar_restaurantes()
         elif opcao_escolhida == 3:
             print('Ativar Restaurantes')
         elif opcao_escolhida == 4:
@@ -54,6 +55,14 @@ def cadastrar_novo_restaurante():
     endereco = input('Digite o endereço do restaurante: ')
     restaurantes.append({'nome': nome, 'endereco': endereco})
     print(f'Restaurante cadastrado com sucesso {restaurantes}')
+    input('Pressione enter para continuar')
+    main()
+
+def listar_restaurantes():
+    os.system('clear')
+    print('Listar restaurantes')
+    for restaurante in restaurantes:
+        print(f'Nome: {restaurante["nome"]} - Endereço: {restaurante["endereco"]}')
     input('Pressione enter para continuar')
     main()
 
