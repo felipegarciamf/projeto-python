@@ -4,7 +4,7 @@ import desafio_por_idade
 import desafio_logon
 
 
-restaurantes = []
+restaurantes = ['pizza', 'lasanha', 'macarrão', 'sushi', 'hamburguer', 'churrasco', 'feijoada', 'strogonoff', 'peixe', 'frango']
 
 
 def exibir_nome_do_programa():
@@ -38,6 +38,7 @@ def escolher_opcao():
             cadastrar_novo_restaurante()
         elif opcao_escolhida == 2:
             print('Listar Restaurantes')
+            print('vai se foder')
             listar_restaurantes()
         elif opcao_escolhida == 3:
             print('Ativar Restaurantes')
@@ -52,8 +53,7 @@ def cadastrar_novo_restaurante():
     os.system('clear')
     print('Cadastrar novo restaurante')
     nome = input('Digite o nome do restaurante: ')
-    endereco = input('Digite o endereço do restaurante: ')
-    restaurantes.append({'nome': nome, 'endereco': endereco})
+    restaurantes.append(nome)
     print(f'Restaurante cadastrado com sucesso {restaurantes}')
     input('Pressione enter para continuar')
     main()
@@ -62,7 +62,8 @@ def listar_restaurantes():
     os.system('clear')
     print('Listar restaurantes')
     for restaurante in restaurantes:
-        print(f'Nome: {restaurante["nome"]} - Endereço: {restaurante["endereco"]}')
+        print(f'Nome: {restaurante}')
+
     input('Pressione enter para continuar')
     main()
 
