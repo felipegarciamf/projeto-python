@@ -7,6 +7,16 @@ import desafio_logon
 restaurantes = [{'nome' : 'restaurante1', 'ativo': True}, {'nome' : 'restaurante2', 'ativo': False}]
 
 
+def alterar_estado_restaurante():
+    exibir_subtitulo('Ativar Restaurantes')
+    nome_restaurante = input('Digite o nome do restaurante que deseja ativar: ')
+    for restaurante in restaurantes:
+        if restaurante['nome'] == nome_restaurante:
+            restaurante['ativo'] = True
+            print(f'Restaurante {nome_restaurante} ativado com sucesso')
+            voltar_ao_menu_principal()
+
+
 def voltar_ao_menu_principal():
     input('Pressione uma tecla para voltar ao menu ')
     main()
