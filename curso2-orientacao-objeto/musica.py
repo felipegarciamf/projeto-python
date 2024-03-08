@@ -1,6 +1,5 @@
 class Musica:
-
-    def init(self, nome, artista, duracao):
+    def __init__(self, nome, artista, duracao):
         self.nome = nome
         self.artista = artista
         self.duracao = duracao

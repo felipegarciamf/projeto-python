@@ -1,25 +1,21 @@
 class Restaurante:
-    nome =  ''  
-    categoria = ''
-    ativo = False
-
-    def init(self, nome, categoria, ativo):
+    def __init__(self, nome, categoria, ativo):
         self.nome = nome
         self.categoria = categoria
         self.ativo = ativo
 
 
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Restaurante da Praça'
-restaurante_praca.categoria = 'Comida Brasileira'
-restaurante_praca.ativo = True
+
+    nome =  ''  
+    categoria = ''
+    ativo = False
 
 
-restaurante_pizza = Restaurante()
-restaurante_pizza.nome = 'Pizzaria'
-restaurante_pizza.categoria = 'Comida Italiana'
-restaurante_pizza.ativo = False
 
-restaurantes = [vars(restaurante_praca), vars(restaurante_pizza)]
+restaurante_praca2 = Restaurante('Restaurante da Praça','Comida Brasileira', True)
 
-print(restaurantes)
+restaurante_pizza2 = Restaurante('Pizzaria', 'Comida Italiana', False)
+
+restaurantes2 = [vars(restaurante_praca2), vars(restaurante_pizza2)]
+
+print(restaurantes2)
