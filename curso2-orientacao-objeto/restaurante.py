@@ -3,6 +3,11 @@ class Restaurante:
     categoria = ''
     ativo = False
 
+    def init(self, nome, categoria, ativo):
+        self.nome = nome
+        self.categoria = categoria
+        self.ativo = ativo
+
 
 restaurante_praca = Restaurante()
 restaurante_praca.nome = 'Restaurante da Praça'
