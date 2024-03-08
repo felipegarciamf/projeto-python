@@ -15,6 +15,6 @@ restaurante_pizza.nome = 'Pizzaria'
 restaurante_pizza.categoria = 'Comida Italiana'
 restaurante_pizza.ativo = False
 
-restaurantes = [dir(restaurante_praca), dir(restaurante_pizza)]
+restaurantes = [vars(restaurante_praca), vars(restaurante_pizza)]
 
 print(restaurantes)
