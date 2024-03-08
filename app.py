@@ -8,6 +8,12 @@ restaurantes = [{'nome' : 'restaurante1', 'ativo': True}, {'nome' : 'restaurante
 
 
 def alterar_estado_restaurante():
+    """
+    Altera o estado do restaurante para ativo ou inativo
+    """
+
+
+
     exibir_subtitulo('Ativar Restaurantes')
     nome_restaurante = input('Digite o nome do restaurante que deseja ativar: ')
     for restaurante in restaurantes:
