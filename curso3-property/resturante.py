@@ -7,18 +7,25 @@ class Restaurante:
         Restaurante.restaurantes.append(self)
     def __str__(self):
         return f'{self._nome} ({self._categoria} | {self.ativo})'
-    def listar_restaurantes():
-        for restaurante in Restaurante.restaurantes:
+    
+
+    @classmethod
+    def listar_restaurantes(cls):
+        for restaurante in cls.restaurantes:
             print(restaurante)
 
     @property
     def ativo(self):
         return 'verdadeiro' if self._ativo else 'false'
+    
+
 
 restaurante_praca2 = Restaurante('Restaurante da Praça','Comida Brasileira')
 restaurante_praca2._ativo = True
+restaurante_praca2.listar_restaurantes()
+
+
 
 restaurante_pizza2 = Restaurante('Pizzaria', 'Comida Italiana')
-
-Restaurante.listar_restaurantes()
+restaurante_pizza2.listar_restaurantes()
 
