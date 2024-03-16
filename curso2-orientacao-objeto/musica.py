@@ -3,6 +3,7 @@ class Musica:
         self.nome = nome
         self.artista = artista
         self.duracao = duracao
+
     def __str__(self):
         return f'{self.nome} | {self.artista}'
 
