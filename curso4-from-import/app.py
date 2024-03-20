@@ -10,6 +10,7 @@ def cadastrar_restaurante(nome, categoria):
     restaurante_praca2.listar_restaurantes()
 
 
+
 def main():
     cadastrar_restaurante('Restaurante da Praça','Comida Brasileira')
     

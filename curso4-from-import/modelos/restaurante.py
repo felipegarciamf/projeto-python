@@ -1,6 +1,5 @@
 from modelos.avaliacao import Avaliacao
 
-
 class Restaurante:
     restaurantes = []
     def __init__(self, nome, categoria):
@@ -14,11 +13,11 @@ class Restaurante:
     def __str__(self):
         return f'{self._nome} ({self._categoria} | {self._ativo})'
     
-
     @classmethod
     def listar_restaurantes(cls):
         for restaurante in cls.restaurantes:
-            print(restaurante)
+            print(restaurante, f'Média de avaliação: {restaurante.media_avaliacao}')
+
             for avaliacao in restaurante.avalicao:
                 print(avaliacao)
 
@@ -33,4 +32,12 @@ class Restaurante:
     def adicionar_avaliacao(self, nome, nota):
         avaliacao = Avaliacao(nome, nota)
         self.avalicao.append(avaliacao)
+
+
+    @property
+    def media_avaliacao(self):
+        soma = 0
+        for avaliacao in self.avalicao:
+            soma += avaliacao.nota
+        return soma / len(self.avalicao)
         
