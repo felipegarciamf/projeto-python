@@ -1,7 +1,7 @@
-class Prato:
-    def __init__(self, nome, preco):
-        self.nome = nome
-        self.preco = preco
+from modelos.cardapio.item_cardapio import ItemCardapio
 
-    def __str__(self):
-        return f'{self.nome} - R$ {self.preco:.2f}'
+
+class Prato(ItemCardapio):
+    def __init__(self, nome, preco, descricao):
+        super.__init__(nome, preco)
+        self.descricao = descricao
