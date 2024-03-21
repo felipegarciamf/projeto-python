@@ -1,18 +1,19 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 
-def cadastrar_restaurante(nome, categoria):
-    restaurante_praca2 = Restaurante(nome, categoria)
-    restaurante_praca2.alterar_status()
-    restaurante_praca2.adicionar_avaliacao("jorge", 3)
-    restaurante_praca2.adicionar_avaliacao("Joana dark", 3)
-    restaurante_praca2.adicionar_avaliacao("Chico Boarque", 5)
-    restaurante_praca2.listar_restaurantes()
+
+bebida = Bebida('Coca-cola', 5.0, '600ml')
+prato = Prato('Feijoada', 30.00, 'Feijoada completa')
+
+restaurante_praca = Restaurante('Restaurante da Praça','Comida Brasileira')
 
 
 
 def main():
-    cadastrar_restaurante('Restaurante da Praça','Comida Brasileira')
+    print(bebida)
+    print(prato)
     
 
 if __name__ == '__main__':
