@@ -9,6 +9,9 @@ prato = Prato('Feijoada', 30.00, 'Feijoada completa')
 
 restaurante_praca = Restaurante('Restaurante da Praça','Comida Brasileira')
 
+restaurante_praca.adicionar_no_cardapio(bebida)
+restaurante_praca.adicionar_no_cardapio(prato)
+
 
 
 def main():
