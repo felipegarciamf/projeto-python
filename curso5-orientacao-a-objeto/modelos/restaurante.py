@@ -53,9 +53,7 @@ class Restaurante:
         
     def adicionar_no_cardapio(self, item):
         if isinstance(item, ItemCardapio):
-            print('O item não é um prato ou bebida')
-            return
-        self._cardapio.append(item)
+            self._cardapio.append(item)
 
 
     @property
