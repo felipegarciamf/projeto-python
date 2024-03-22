@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 
 class Restaurante:
     restaurantes = []
@@ -51,4 +52,15 @@ class Restaurante:
     #    self._cardapio.append(prato)
         
     def adicionar_no_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            print('O item não é um prato ou bebida')
+            return
         self._cardapio.append(item)
+
+
+    @property
+    def exibir_cardapio(self):
+        print("Restaurante ", self._nome)
+        for i, item in enumerate(self._cardapio, start=1):
+            mensagem = f'{i} - {item} - R$ {item.preco}' 
+            print(mensagem)
